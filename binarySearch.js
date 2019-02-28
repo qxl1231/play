@@ -17,7 +17,7 @@
 
 //递归
 const binarySearch = (sortedArray, start, end, input) => {
-    let mid = parseInt((start + end) / 2);
+    let mid = Math.floor((start + end) / 2);
     if (sortedArray[mid] > input) {//8>5
         end = mid - 1;
         return binarySearch(sortedArray, start, end, input);

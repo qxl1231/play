@@ -25,8 +25,8 @@ const quickSort = (arr) => {
     }
     let mid = Math.floor(arr.length / 2);
     let midNum = arr.splice(mid, 1)[0];
-    // let midNum=arr[mid];//这里为什么要用splice?如果用下面这张,会循环递归,死循环报错
-    console.log(midNum);
+    // let midNum=arr[mid];//这里为什么要用splice?如果用下面这种,会循环递归,死循环报错,用上面的方式就会执行结束
+    console.log(mid);
     let left = [];
     let right = [];
     for (let i = 0; i < arr.length; i++) {
@@ -36,6 +36,7 @@ const quickSort = (arr) => {
             right.push(arr[i]);
         }
     }
+    // console.log(left,right)
     return quickSort(left).concat(midNum, quickSort(right))
 
 };

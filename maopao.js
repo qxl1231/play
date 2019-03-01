@@ -36,7 +36,7 @@ const quickSort = (arr) => {
             right.push(arr[i]);
         }
     }
-    // console.log(left,right)
+    console.log(left,right)
     return quickSort(left).concat(midNum, quickSort(right))
 
 };

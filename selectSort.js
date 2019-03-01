@@ -28,5 +28,37 @@ function selectSort(arr) {
 
 
 let values = [141, 122, 322, 41, 52];
+// selectSort(values);
 
-console.log(selectSort(values));
+
+//另一种选择排序算法
+const find = (arr) => {
+    let index = 0;
+    let small = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < small) {
+            small = arr[i];
+            index = i;
+        }
+    }
+    console.log(index);
+    return index;
+};
+
+const sort = (arr2) => {
+    let newArr = [];
+    for (let i = 0; i < arr2.length; i++) {
+        let index = find(arr2);
+        let popArr = arr2.splice(index, 1);
+        newArr.push(popArr[0]);
+    }
+    return newArr;
+};
+console.log(sort(values));//此处有问题,只会排序一部分
+
+//递归求和
+const sum = (n) => {
+    if (n == 0) return 0;
+    return sum(n - 1) + 2;
+};
+console.log(sum(2))

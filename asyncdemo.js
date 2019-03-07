@@ -1,6 +1,6 @@
 // //十八位
-// var _Id_Card = "320283198810274410";
-// var _Bank_Card = "320283198810274410";
+// var _Id_Card = "320283198810222274410";
+// var _Bank_Card = "32028319882210274410";
 //
 //
 // const replaceCardNum=(input,start,end)=>{
